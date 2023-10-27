@@ -32,9 +32,9 @@ updateAt: Date;
 })
 deleteAt: Date;
 
-@ManyToMany(() => ArtistEntity, artist => artist.paint)
-@JoinTable()
-artist: ArtistEntity[];
+@ManyToMany(() => ArtistEntity, artist => artist.paints)
+
+artists: ArtistEntity[];
 
 @Column('varchar',{
     name: 'name',

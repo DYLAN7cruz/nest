@@ -32,9 +32,9 @@ updateAt: Date;
 })
 deleteAt: Date;
 
-@ManyToMany(() => PaintEntity, paint => paint.artist)
+@ManyToMany(() => PaintEntity, paint => paint.artists)
 @JoinTable()
-paint: PaintEntity[];
+paints: PaintEntity[];
 
 @Column('varchar',{
     name: 'name',
@@ -56,6 +56,7 @@ lastname: string;
     comment: 'artist nationality',
 })
 nationality: string;
+   
 
 
 
